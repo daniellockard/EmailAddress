@@ -13,6 +13,7 @@ class EmailAddress < String
 		unless str =~  EmailAddressRegex
 			raise EmailAddressError, "Invalid Email Address", caller
 		else
+			@email = str
 			@unf = str.split('@')[0]
 			@dmn = str.split('@')[1]
 			if str.include? "+"
@@ -24,6 +25,12 @@ class EmailAddress < String
 			end
 		end
 	end
+
+	# returns the email address
+	def email
+		return @email
+	end
+
 	# The username with any filter 
 	# * blah+blah@blah.com will return blah+blah
 	def username_with_filter

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="../.././rdoc-style.css" type="text/css" media="screen" />
 </head>
 <body class="standalone-code">
-  <pre><span class="ruby-comment cmt"># File EmailAddress.rb, line 12</span>
+  <pre><span class="ruby-comment cmt"># File email_address.rb, line 12</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">str</span>)
                 <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">=~</span>  <span class="ruby-constant">EmailAddressRegex</span>
                         <span class="ruby-identifier">raise</span> <span class="ruby-constant">EmailAddressError</span>, <span class="ruby-value str">&quot;Invalid Email Address&quot;</span>, <span class="ruby-identifier">caller</span>
